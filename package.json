@@ -1,20 +1,22 @@
 {
-  "name": "Async to Sync Aggregator",
+  "name": "openhab-4-async-to-sync-aggregator",
   "version": "1.0.0",
   "description": "The Async to Sync Aggregator module is designed for OpenHAB systems to synchronize the state of a switch item based on updates from a group of items.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjcumming/OpenHAB-4-Async-to-Sync-Aggregator.git"
+  },
   "keywords": [
-    "openHAB"
+    "openhab"
   ],
   "author": "Michael Cumming",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rkoshak/openhab-rules-tools/issues"
+    "url": "https://github.com/mjcumming/OpenHAB-4-Async-to-Sync-Aggregator/issues"
   },
-  "devDependencies": {
-    "openhab": "^4.5.1"
-  }
+  "homepage": "https://github.com/mjcumming/OpenHAB-4-Async-to-Sync-Aggregator#readme"
 }

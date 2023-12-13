@@ -11,7 +11,7 @@ This module aggregates asynchronous events from a specified group of items and u
 ## System Requirements
 
 - JavaScript (ECMAScript 2022+) binding must be enabled in OpenHAB.
-- OpenHAB instance running with access to the file system.
+- OpenHAB JS
 
 ## Installation
 
@@ -19,9 +19,13 @@ This module aggregates asynchronous events from a specified group of items and u
 
 Access the `automation/js` directory within your OpenHAB configuration directory. This directory is the target location for installing the module.
 
+In an OpenHABian installation the directory is /etc/openhab/automation/js 
+
 ### Step 2: Install the Module
 
-In the `automation/js` directory, create a new file named `AsyncToSyncAggregator.js` and paste the JavaScript code for the Async to Sync Aggregator module into this file. This process installs the module directly into your OpenHAB system.
+    ```bash
+    npm install openhab-4-async-to-sync-aggregator
+    ```
 
 ### Step 3: Usage
 

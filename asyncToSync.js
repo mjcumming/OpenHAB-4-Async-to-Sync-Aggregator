@@ -65,5 +65,11 @@ class AsyncToSyncAggregator {
 }
 
 // Example usage of the module
-new AsyncToSyncAggregator('CAR_AudiQ7_Sync', 'CAR_AudiQ7_Sync_Switch');
+//new AsyncToSyncAggregator('CAR_AudiQ7_Sync', 'CAR_AudiQ7_Sync_Switch');
+
+
+module.exports = {
+    AsyncToSyncAggregator: AsyncToSyncAggregator
+};  
+
 
