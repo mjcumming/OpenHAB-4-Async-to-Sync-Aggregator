@@ -24,7 +24,7 @@ In an OpenHABian installation the directory is /etc/openhab/automation/js
 ### Step 2: Install the Module
 
     ```bash
-    npm install openhab-4-async-to-sync-aggregator
+    npm install openhab-asynctosync
     ```
 
 ### Step 3: Usage
@@ -32,6 +32,6 @@ In an OpenHABian installation the directory is /etc/openhab/automation/js
 To use the Async to Sync Aggregator module in your OpenHAB setup, you will need to initialize it within your JavaScript rule file. Here's an example of how to instantiate the module:
 
 ```javascript
-const AsyncToSyncAggregator = require('./AsyncToSyncAggregator');
+const AsyncToSyncAggregator = require('./'openhab-asynctosync'');
 
 new AsyncToSyncAggregator('GroupName', 'SyncSwitchName');

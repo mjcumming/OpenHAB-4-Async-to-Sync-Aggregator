@@ -1,6 +1,6 @@
 {
-  "name": "openhab-4-async-to-sync-aggregator",
-  "version": "1.0.0",
+  "name": "openhab-asynctosync",
+  "version": "1.0.2",
   "description": "The Async to Sync Aggregator module is designed for OpenHAB systems to synchronize the state of a switch item based on updates from a group of items.",
   "main": "index.js",
   "scripts": {

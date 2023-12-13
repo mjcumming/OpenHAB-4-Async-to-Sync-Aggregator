@@ -1,4 +1,4 @@
-const { AsyncToSync } = require('./asyncToSync.js');
+const { AsyncToSyncAggregator } = require('./asyncToSync.js');
 
-module.exports = asyncToSync;
+module.exports = AsyncToSyncAggregator;
 
