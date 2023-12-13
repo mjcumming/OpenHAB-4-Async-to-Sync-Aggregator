@@ -35,3 +35,30 @@ To use the Async to Sync Aggregator module in your OpenHAB setup, you will need 
 const AsyncToSyncAggregator = require('./'openhab-asynctosync'');
 
 new AsyncToSyncAggregator('GroupName', 'SyncSwitchName');
+```
+
+## Example Useage
+
+
+To synchronize events from a car using the [MQTTCarPresence](https://github.com/aderusha/MQTTCarPresence) library, define your items as follows:
+
+```plaintext
+Switch                  CAR_AudiQ7_Sync_Switch                    "Audi Q7 Sync"                      (gAudiQ7)
+
+Group                   CAR_AudiQ7_Sync                           "Audi Q7 Sync"                      (gAudiQ7)                      {Async_Time="6"}
+Number                  CAR_AudiQ7_WIFI_Signal_Strength           "Audi Q7 Signal"                    (CAR_AudiQ7_Sync)        {channel="mqtt:homeassistant_AudiQ7_2Dsignal:Queen:AudiQ7_2Dsignal:AudiQ7_2Dsignal_5Fsensor#sensor"}
+Number                  CAR_AudiQ7_Uptime_Seconds                 "Audi Q7 Uptime"                    (CAR_AudiQ7_Sync)        {channel="mqtt:homeassistant_AudiQ7_2Duptime:Queen:AudiQ7_2Duptime:AudiQ7_2Duptime_5Fsensor#sensor"}
+
+## Metadata Configuration
+
+The `Async_Time` metadata plays a crucial role in the functioning of the Async to Sync Aggregator module. It defines the time frame within which all the items in a group need to be updated to consider the events as synchronized.
+
+### Setting the `Async_Time` Metadata
+
+For the module to work correctly, you must set the `Async_Time` metadata on your group item. This metadata specifies the maximum allowed time (in seconds) for the items in the group to update their states to be considered in sync.
+
+For example:
+
+```plaintext
+Group   CAR_AudiQ7_Sync   "Audi Q7 Sync"   (gAudiQ7)   {Async_Time="6"}
+```
