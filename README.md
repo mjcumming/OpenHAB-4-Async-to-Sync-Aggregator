@@ -49,6 +49,8 @@ Group                   CAR_AudiQ7_Sync                           "Audi Q7 Sync"
 Number                  CAR_AudiQ7_WIFI_Signal_Strength           "Audi Q7 Signal"                    (CAR_AudiQ7_Sync)        {channel="mqtt:homeassistant_AudiQ7_2Dsignal:Queen:AudiQ7_2Dsignal:AudiQ7_2Dsignal_5Fsensor#sensor"}
 Number                  CAR_AudiQ7_Uptime_Seconds                 "Audi Q7 Uptime"                    (CAR_AudiQ7_Sync)        {channel="mqtt:homeassistant_AudiQ7_2Duptime:Queen:AudiQ7_2Duptime:AudiQ7_2Duptime_5Fsensor#sensor"}
 
+```
+
 ## Metadata Configuration
 
 The `Async_Time` metadata plays a crucial role in the functioning of the Async to Sync Aggregator module. It defines the time frame within which all the items in a group need to be updated to consider the events as synchronized.
