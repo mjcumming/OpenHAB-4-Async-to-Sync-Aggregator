@@ -23,7 +23,7 @@ In an OpenHABian installation the directory is /etc/openhab/automation/js
 
 ### Step 2: Install the Module
 
-    ```bash
+    ```
     npm install openhab-asynctosync
     ```
 
@@ -43,11 +43,11 @@ new AsyncToSyncAggregator('GroupName', 'SyncSwitchName');
 To synchronize events from a car using the [MQTTCarPresence](https://github.com/aderusha/MQTTCarPresence) library, define your items as follows:
 
 ```plaintext
-Switch                  CAR_AudiQ7_Sync_Switch                    "Audi Q7 Sync"                      (gAudiQ7)
+Switch                  CAR_AudiQ7_Sync_Switch               "Audi Q7 Sync"         (gAudiQ7)
 
-Group                   CAR_AudiQ7_Sync                           "Audi Q7 Sync"                      (gAudiQ7)                      {Async_Time="6"}
-Number                  CAR_AudiQ7_WIFI_Signal_Strength           "Audi Q7 Signal"                    (CAR_AudiQ7_Sync)        {channel="mqtt:homeassistant_AudiQ7_2Dsignal:Queen:AudiQ7_2Dsignal:AudiQ7_2Dsignal_5Fsensor#sensor"}
-Number                  CAR_AudiQ7_Uptime_Seconds                 "Audi Q7 Uptime"                    (CAR_AudiQ7_Sync)        {channel="mqtt:homeassistant_AudiQ7_2Duptime:Queen:AudiQ7_2Duptime:AudiQ7_2Duptime_5Fsensor#sensor"}
+Group                   CAR_AudiQ7_Sync                      "Audi Q7 Sync"         (gAudiQ7)                {Async_Time="6"}
+Number                  CAR_AudiQ7_WIFI_Signal_Strength      "Audi Q7 Signal"       (CAR_AudiQ7_Sync)        {channel=""}
+Number                  CAR_AudiQ7_Uptime_Seconds            "Audi Q7 Uptime"       (CAR_AudiQ7_Sync)        {channel=""}
 
 ```
 
